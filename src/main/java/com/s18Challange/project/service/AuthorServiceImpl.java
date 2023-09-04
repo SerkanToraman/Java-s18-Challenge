@@ -3,10 +3,12 @@ package com.s18Challange.project.service;
 import com.s18Challange.project.dao.AuthorRepository;
 import com.s18Challange.project.entity.Author;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AuthorServiceImpl implements AuthorService {
 
     private AuthorRepository authorRepository;
@@ -37,13 +39,14 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public Author delete(Author author) {
-        Optional<Author> deletedAuthorOptional =authorRepository.findById(author.getId());
-        if (deletedAuthorOptional.isPresent()) {
-            Author deletedAuthor = deletedAuthorOptional.get();
-            authorRepository.delete(author);
-            return deletedAuthor;
-        }
-            return null;
+    public void delete(Author author) {
+//        Optional<Author> deletedAuthorOptional =authorRepository.findById(author.getId());
+//        if (deletedAuthorOptional.isPresent()) {
+//            Author deletedAuthor = deletedAuthorOptional.get();
+//            authorRepository.delete(author);
+//            return deletedAuthor;
+//        }
+//            return null;
+        authorRepository.delete(author);
     }
 }

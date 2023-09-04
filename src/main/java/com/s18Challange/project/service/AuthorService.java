@@ -8,5 +8,5 @@ public interface AuthorService {
     List<Author> findAll();
     Author findById(int id);
     Author save(Author author);
-    Author delete(Author author);
+    void delete(Author author);
 }

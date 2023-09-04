@@ -2,10 +2,12 @@ package com.s18Challange.project.service;
 
 import com.s18Challange.project.dao.BookRepository;
 import com.s18Challange.project.entity.Book;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class BookServiceImpl implements BookService {
 
     private BookRepository bookRepository;
