@@ -50,7 +50,7 @@ public class BookController {
         }
         return null;
     }
-    @PostMapping("saveByAuthor/{categoryId}/{authorId}")
+    @PostMapping("/saveByAuthor/{categoryId}/{authorId}")
     public BookResponse saveByAuthor(@RequestBody Book book,
                                      @PathVariable int categoryId,
                                      @PathVariable int authorId) {
